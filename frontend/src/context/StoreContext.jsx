@@ -30,7 +30,7 @@ const StoreContextProvider = (props) => {
       if (cartItems[item] > 0) {
         const itemInfo = allMeals[item];
         if (itemInfo) {
-          totalAmount += itemInfo.price * cartItems[item];
+          totalAmount += Number((itemInfo.price * cartItems[item]).toFixed(2));
         }
       }
     }
