@@ -1,0 +1,183 @@
+.navbar {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 2000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbar .logo {
+  width: 300px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+}
+.navbar .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar .navbar-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .navbar-menu ul a {
+  font-size: 18px;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.navbar .active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.navbar .navbar-menu ul a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.navbar .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar .navbar-right .search-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.navbar .navbar-right .navbar-shopping-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.navbar-right .navbar-shopping-icon .dot {
+  position: absolute;
+  min-width: 12px;
+  min-height: 12px;
+  line-height: 1;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: tomato;
+  vertical-align: top;
+  border-radius: 50%;
+}
+
+.navbar-right .navbar-shopping-icon .shopping-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.navbar button {
+  background: transparent;
+  font-size: 16px;
+  color: var(--white);
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: tomato;
+  transition: all 0.2s;
+}
+
+.navbar button:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar .logo {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .navbar .navbar-menu {
+    gap: 20px;
+    font-size: 17px;
+  }
+  .navbar .navbar-right {
+    gap: 30px;
+  }
+  .navbar .navbar-right .search-icon,
+  .navbar .navbar-right .shopping-icon {
+    font-size: 25px;
+  }
+  .navbar-right button {
+    padding: 8px 25px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar .navbar-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navbar .navbar-right {
+    gap: 20px;
+  }
+
+  .navbar-right button {
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .logo img {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar .navbar-right .search-icon,
+  .navbar .navbar-right .shopping-icon {
+    font-size: 20px;
+  }
+
+  .navbar-right button {
+    padding: 4px 15px;
+    white-space: nowrap;
+  }
+  .navbar .logo img {
+    height: 22px;
+  }
+  .navbar-right .navbar-shopping-icon .dot {
+    font-size: 10px;
+    top: -10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar .logo {
+    display: none;
+  }
+  .navbar .navbar-right {
+    flex: 1;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
