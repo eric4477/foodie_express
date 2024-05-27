@@ -1,5 +1,6 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 import { useState } from "react";
 import LogIn from "./components/LogIn/LogIn";
 import { Route, Routes, Navigate } from "react-router-dom";
@@ -17,6 +18,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }
