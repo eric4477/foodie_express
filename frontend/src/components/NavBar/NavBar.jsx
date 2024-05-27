@@ -6,7 +6,7 @@ import { FaBasketShopping } from "react-icons/fa6";
 import { StoreContext } from "../../context/StoreContext";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ setShowLogin }) {
   const { cartItems, getTotalItems } = useContext(StoreContext);
   let count = getTotalItems(cartItems);
 
@@ -45,7 +45,7 @@ function NavBar() {
             </div>
           )}
         </div>
-        <button>sign in</button>
+        <button onClick={() => setShowLogin(true)}>sign in</button>
       </div>
     </div>
   );
