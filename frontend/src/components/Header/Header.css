@@ -1,0 +1,122 @@
+.header {
+  height: 34vw;
+  max-height: 860px;
+  max-width: 2000px;
+  margin: 30px auto;
+  background: url("../../../public/header_img.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 16px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  border-radius: 16px;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header .header-content {
+  position: absolute;
+  bottom: 10%;
+  left: 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  animation: fadeIn 3s;
+}
+
+.header-content h2 {
+  font-weight: 500;
+  color: var(--white);
+  font-size: max(4.5vw, 22px);
+}
+
+.header-content p {
+  color: var(--white);
+  font-size: 1vw;
+}
+
+.header-content button {
+  border: 1px solid var(--white);
+  color: var(--black);
+  font-weight: 500;
+  padding: 1vw 2.3vw;
+  background-color: var(--white);
+  font-size: max(1vw, 13px);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.header-content button:hover {
+  background-color: transparent;
+  color: var(--white);
+}
+
+@media (max-width: 1050px) {
+  .header {
+    height: 38vw;
+  }
+  .header .header-content {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header .header-content {
+    max-width: 65%;
+  }
+  .header .header-content {
+    gap: 20px;
+  }
+  .header .header-content h2 {
+    font-size: 28px;
+  }
+  .header .header-content p {
+    display: none;
+  }
+  .header .header-content button {
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 470px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header .header-content {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .header .header-content {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .header .header-content {
+    gap: 37.5px;
+  }
+  .header .header-content h2 {
+    font-size: 100px;
+  }
+  .header .header-content p {
+    font-size: 25px;
+  }
+  .header .header-content button {
+    padding: 22px 42px;
+    max-width: 210px;
+    max-height: 80px;
+    display: grid;
+    font-size: 18px;
+  }
+}
