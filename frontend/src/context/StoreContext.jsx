@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
@@ -30,7 +30,7 @@ const StoreContextProvider = (props) => {
       if (cartItems[item] > 0) {
         const itemInfo = allMeals[item];
         if (itemInfo) {
-          totalAmount += Number((itemInfo.price * cartItems[item]).toFixed(2));
+          totalAmount += itemInfo.price * cartItems[item];
         }
       }
     }
@@ -42,13 +42,12 @@ const StoreContextProvider = (props) => {
   };
 
   const generateRandomPrice = () => {
-    return (Math.random() * (50 - 10) + 10).toFixed(2);
+    return Math.floor(Math.random() * (50 - 10 + 1)) + 10;
   };
-
   const updateMeals = (newMeals) => {
     const mealsWithPrices = newMeals.map((meal) => ({
       ...meal,
-      price: meal.price || generateRandomPrice(), // Assign price if not already assigned
+      price: meal.price || generateRandomPrice(),
     }));
 
     setMeals(mealsWithPrices);

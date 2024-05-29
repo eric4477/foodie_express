@@ -48,7 +48,7 @@ function Cart() {
           <div>
             <div className="cart-total-details">
               <p>Subtotal</p>
-              <p>${Number(getTotalCartAmount().toFixed(2))}</p>
+              <p>${getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="cart-total-details">
@@ -58,11 +58,7 @@ function Cart() {
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>
-                $
-                {getTotalCartAmount() &&
-                  Number(getTotalCartAmount().toFixed(2)) + 5}
-              </b>
+              <b>${getTotalCartAmount() && getTotalCartAmount() + 5}</b>
             </div>
           </div>
           {getTotalCartAmount() && (
