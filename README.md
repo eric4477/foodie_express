@@ -7,8 +7,7 @@ This project is part of the ALX Foundation milestone portfolio, showcasing the s
 
 - [Features](#features)
 - [Technologies](#technologies)
-- [Contributing](#contributing)
-- [Team](#team)
+- [Contributors](#Contributors)
 
 ## Features
 
@@ -27,6 +26,7 @@ This project is part of the ALX Foundation milestone portfolio, showcasing the s
 - **Deployment**: Vercel
 - **API**: TheMealDB
 
-## Team
+## Contributors
 
-- [Eric](https://github.com/eric4477)
+- [Abdulmohusain](https://github.com/Abdulmohusain)
+- [Kathylene](https://github.com/Kathy2470)
